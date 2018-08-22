@@ -10,11 +10,11 @@ App development its diff from web development in web development we need to pass
 
 ## Getting Started
 
-Step 1: install navigator  <br />
+<b>Step 1:</b> install navigator  <br />
 ``` navigator: 0.0.4 ```
 
-Step 2: Create new folder ``lib\config``  <br />
-Step 3: Create file in folder ``lib\config\route.dart`` <br />
+<b>Step 2:</b> Create new folder ``lib\config``  <br />
+<b>Step 3:</b> Create file in folder ``lib\config\route.dart`` <br />
 
 ```
 import 'package:flutter/material.dart';
@@ -44,7 +44,7 @@ Map<String,Handler> route = {
 Work of above code is create one route name ``home ``. Route have their own handler called  ``homeHandler``. You can define TransactionType of slide how come on screen. Its not compansary if it null then Defualt transaction is work.
 <br />
 <br />
-Step 4: Register your route  <br />
+<b> Step 4: </b> Register your route  <br />
 It's a final step of intigration. Now you need to register your routes with package in first page of your class constructor my landing page of app is `` LandingPage() ``
 <br />
 <br />
@@ -80,6 +80,8 @@ class LandingPage extends StatelessWidget {
 ```
 
 ### Navigation Helper
+
+Now you navigate from anywhere in app
 
 ```
 Navigate.navigate(context,
