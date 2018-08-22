@@ -1,8 +1,8 @@
 name: navigate
 description: A new Flutter package for Byutifull navigation with advanced routing
-version: 0.0.1
+version: 0.0.4
 author: ravi bhanderi<ravibhanderi14@gmail.com>
-homepage:
+homepage: https://github.com/ravipatel147/navigate
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
@@ -31,7 +31,6 @@ flutter:
   #
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
-
   # To add custom fonts to your package, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
