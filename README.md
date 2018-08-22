@@ -47,6 +47,7 @@ Work of above code is create one route name ``home ``. Route have their own hand
 Step 4: Register your route  <br />
 It's a final step of intigration. Now you need to register your routes with package in first page of your class constructor my landing page of app is `` LandingPage() ``
 <br />
+<br />
 
 ```
 import 'package:flutter/material.dart';
