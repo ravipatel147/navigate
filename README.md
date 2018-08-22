@@ -10,7 +10,7 @@ App development its diff from web development in web development we need to pass
 
 ## Getting Started
 
-Step 1: install navigator  <\br>
+Step 1: install navigator  \n
 ``` navigator: 0.0.4 ```
 
 
