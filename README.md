@@ -1,5 +1,5 @@
 # demo
-<img src="./assets/image.gif" />
+<img src="./assets/image.gif" height="400" />
 # navigate
 
 A new Flutter package for Byutifull navigation
