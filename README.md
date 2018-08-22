@@ -1,3 +1,5 @@
+# demo
+<img src="./assets/image.gif" />
 # navigate
 
 A new Flutter package for Byutifull navigation
