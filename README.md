@@ -14,7 +14,7 @@ Step 1: install navigator  <br />
 ``` navigator: 0.0.4 ```
 
 Step 2: Create new folder ``lib\config``  <br />
-Step 2: Create file in folder ``lib\config\route.dart`` <br />
+Step 3: Create file in folder ``lib\config\route.dart`` <br />
 
 ```
 import 'package:flutter/material.dart';
@@ -41,7 +41,41 @@ Map<String,Handler> route = {
  };
 ```
 <br />
-Work of above code is create one route name ```home```. Route have their own handler called  ```homeHandler```. You can define TransactionType of slide how come on screen. Its not compansary if it null then Defualt transaction is work
+Work of above code is create one route name ``home ``. Route have their own handler called  ``homeHandler``. You can define TransactionType of slide how come on screen. Its not compansary if it null then Defualt transaction is work.
+
+<br />
+Step 4: Register your route  <br />
+It's a final step of intigration. Now you need to register your routes with package in first page of your class constructor my landing page of app is `` LandingPage() ``
+
+```
+import 'package:flutter/material.dart';
+import 'package:navigate/navigate.dart';
+
+/* your route file */ 
+import 'package:testpackage/config/route.dart';
+
+class LandingPage extends StatelessWidget {
+
+  LandingPage(){
+    /* registration of routes */  
+    Navigate.registerRoutes(
+      routes: route,
+    );
+    /* registration of routes */
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Navigator Demo"),),
+      body: Center(
+            child:Text("welcome")
+        ),
+      ),
+    );
+  }
+}  
+
+```
 
 
 
