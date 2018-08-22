@@ -77,6 +77,18 @@ class LandingPage extends StatelessWidget {
 
 ```
 
+### Navigation Helper
+
+```
+Navigate.navigate(context,
+                  "home", /* route name */
+                  transactionType: transactionType, /* Override handler transaction type (optional) */
+                  replaceRoute: replaceRoute, // replace route after navigate or not 
+                  arg: {"transactionType":transactionType,"replaceRoute":replaceRoute} // argument data receiver in handler page builder function */
+                  );
+```
+
+
 
 
 
