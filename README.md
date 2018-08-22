@@ -14,7 +14,7 @@ App development its diff from web development in web development we need to pass
  <br />
 ``` navigator: 0.0.4 ```
 
-<h4> Step 2: Create new folder ``lib\config``  </h4>
+<h4> Step 2: Create new folder </h4> ``lib\config``  
 <h4> Step 3: Create file in folder ``lib\config\route.dart`` </h4>
 <br />
 
