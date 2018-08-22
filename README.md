@@ -13,7 +13,6 @@ App development its diff from web development in web development we need to pass
 <h4> Step 1: install navigator </h4> <br />
 ```
 navigator: 0.0.4
-
 ```
 
 <h4> Step 2: Create new folder </h4> ``lib\config``  
