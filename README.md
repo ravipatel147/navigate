@@ -2,7 +2,8 @@
 <img src="./assets/image.gif" height="400" />
 <a href="https://github.com/ravipatel147/navigate/tree/master/example"> Example source code is here </a>
 <br />
-### navigate
+
+<h3> navigate </h3>
 
 A new Flutter package for Byutifull navigation
 
