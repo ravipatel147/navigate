@@ -5,7 +5,7 @@
 
 <h3> navigate </h3>
 
-A new Flutter package for Byutifull navigation
+A package that allow to developer send Map,List etc object data as argument in route. and provide batter way to manage route and animation in flutter. 
 
 # Why develop this package
 
@@ -68,11 +68,12 @@ import 'package:testpackage/config/route.dart';
 class LandingPage extends StatelessWidget {
 
   LandingPage(){
-    /* registration of routes */  
-    Navigate.registerRoutes(
+    // start registration of routes 
+     Navigate.registerRoutes(
       routes: route,
+      defualtTransactionType: TransactionType.fromRight // if not provide in handler or manually in argument of navigation
     );
-    /* registration of routes */
+    //end  registration of routes 
   }
   @override
   Widget build(BuildContext context) {
@@ -97,7 +98,7 @@ Navigate.navigate(context,
                   "home", /* route name */
                   transactionType: transactionType, /* Override handler transaction type (optional) */
                   replaceRoute: replaceRoute, // replace route after navigate or not 
-                  arg: {"transactionType":transactionType,"replaceRoute":replaceRoute} // argument data receiver in handler page builder function */
+                  arg: {"transactionType":transactionType,"replaceRoute":replaceRoute} // argument data receiver in handler pag builder function */
                   );
 ```
 
