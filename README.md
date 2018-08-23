@@ -24,7 +24,7 @@ navigator: 0.0.4
  Step 3: Create file in folder ``lib\config\route.dart``
 <br />
 
-```
+<pre>
 import 'package:flutter/material.dart';
 import 'package:navigate/navigate.dart';
 import 'package:testpackage/main.dart';
@@ -47,7 +47,7 @@ var homeHandler = Handler(
 Map<String,Handler> route = {
     "home" : homeHandler
  };
-```
+</pre>
 <br />
 Work of above code is create one route name ``home ``. Route have their own handler called  ``homeHandler``. You can define TransactionType of slide how come on screen. Its not compansary if it null then Defualt transaction is work.
 <br />

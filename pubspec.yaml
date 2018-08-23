@@ -1,9 +1,8 @@
 name: navigate
-description: A new Flutter package for Byutifull navigation with advanced routing
+description: A package that allow to developer send Map,List etc object data as argument in route. and provide batter way to manage route and animation in flutter
 version: 0.0.4
-author: ravi bhanderi<ravibhanderi14@gmail.com>
+author: ravibhanderi
 homepage: https://github.com/ravipatel147/navigate
-
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
 

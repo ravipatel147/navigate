@@ -58,7 +58,7 @@ It's a final step of intigration. Now you need to register your routes with pack
 <br />
 <br />
 
-```
+<pre>
 import 'package:flutter/material.dart';
 import 'package:navigate/navigate.dart';
 
@@ -86,7 +86,7 @@ class LandingPage extends StatelessWidget {
   }
 }  
 
-```
+</pre>
 
 ### Navigation Helper
 
