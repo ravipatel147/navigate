@@ -1,7 +1,7 @@
 name: navigate
 description: A package that allow to developer send Map,List etc object data as argument in route. and provide batter way to manage route and animation in flutter
-version: 0.0.4
-author: ravibhanderi
+version: 0.0.5
+author: ravindra Bhanderi<ravibhanderi14@gmail.com>
 homepage: https://github.com/ravipatel147/navigate
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"

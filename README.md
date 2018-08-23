@@ -1,6 +1,6 @@
 # demo
 <img src="./assets/image.gif" height="400" />
-<a href="https://github.com/ravipatel147/navigate/tree/master/example"> Example source code is here </a>
+<a href="https://drive.google.com/file/d/1_Dkb2YOfKSrWd3qjkvYw1ka5_qmOWO6Q"> Example source code is here </a>
 <br />
 
 <h3> navigate </h3>
@@ -20,11 +20,11 @@ App development its diff from web development in web development we need to pass
 navigator: 0.0.4
 ```
 
- Step 2: Create new folder  ``lib\config``  
- Step 3: Create file in folder ``lib\config\route.dart``
+ Step 2: Create new folder  `lib\config`  
+ Step 3: Create file in folder `lib\config\route.dart`
 <br />
 
-<pre>
+```
 import 'package:flutter/material.dart';
 import 'package:navigate/navigate.dart';
 import 'package:testpackage/main.dart';
@@ -47,14 +47,14 @@ var homeHandler = Handler(
 Map<String,Handler> route = {
     "home" : homeHandler
  };
-</pre>
+```
 <br />
-Work of above code is create one route name ``home ``. Route have their own handler called  ``homeHandler``. You can define TransactionType of slide how come on screen. Its not compansary if it null then Defualt transaction is work.
+Work of above code is create one route name `home `. Route have their own handler called  `homeHandler`. You can define TransactionType of slide how come on screen. Its not compansary if it null then Defualt transaction is work.
 <br />
 <br />
 Step 4: Register your route
 <br />
-It's a final step of intigration. Now you need to register your routes with package in first page of your class constructor my landing page of app is `` LandingPage() ``
+It's a final step of intigration. Now you need to register your routes with package in first page of your class constructor my landing page of app is ` LandingPage() `
 <br />
 <br />
 
