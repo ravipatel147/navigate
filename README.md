@@ -1,7 +1,8 @@
 # demo
 <img src="https://docs.google.com/uc?export=download&id=1_Dkb2YOfKSrWd3qjkvYw1ka5_qmOWO6Q" height="400" />
-<a href="https://github.com/ravipatel147/navigate/tree/master/example"> Example source code is here </a>
 <br />
+<a href="https://github.com/ravipatel147/navigate/tree/master/example"> Example source code is here </a>
+
 
 ## navigate
 
@@ -15,14 +16,14 @@ App development its diff from web development in web development we need to pass
 
 ## Getting Started
 
- Step 1: install navigator <br />
+ Step 1: install navigator 
 ```
-navigator: 0.0.4
+navigator: 0.0.6
 ```
 
  Step 2: Create new folder  `lib\config`  
  Step 3: Create file in folder `lib\config\route.dart`
-<br />
+
 
 ```
 import 'package:flutter/material.dart';
@@ -53,7 +54,7 @@ Work of above code is create one route name <code> home </code> . Route have the
 <br />
 Step 4: Register your route
 <br />
-It's a final step of intigration. Now you need to register your routes with package in first page of your class constructor my landing page of app is `LandingPage()`
+It's a final step of intigration. Now you need to register your routes with package in first page of your class constructor my landing page of app is <code> LandingPage() </code>
 <br />
 <br />
 
