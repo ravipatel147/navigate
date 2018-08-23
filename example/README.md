@@ -4,4 +4,4 @@ Clone or download code. After go in to the project directopry and run ``` flutte
 
 
 ## Result 
-<img src="../assets/image.gif" height="400" />
+<img src="https://docs.google.com/uc?export=download&id=1_Dkb2YOfKSrWd3qjkvYw1ka5_qmOWO6Q" height="400" />

@@ -1,6 +1,6 @@
 # demo
-<img src="https://drive.google.com/file/d/1_Dkb2YOfKSrWd3qjkvYw1ka5_qmOWO6Q" height="400" />
-<a href="https://drive.google.com/file/d/1_Dkb2YOfKSrWd3qjkvYw1ka5_qmOWO6Q"> Example source code is here </a>
+<img src="https://docs.google.com/uc?export=download&id=1_Dkb2YOfKSrWd3qjkvYw1ka5_qmOWO6Q" height="400" />
+<a href="https://github.com/ravipatel147/navigate/tree/master/example"> Example source code is here </a>
 <br />
 
 <h3> navigate </h3>
