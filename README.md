@@ -3,7 +3,7 @@
 <a href="https://github.com/ravipatel147/navigate/tree/master/example"> Example source code is here </a>
 <br />
 
-<h3> navigate </h3>
+## navigate
 
 A new Flutter package for Byutifull navigation
 
@@ -31,30 +31,29 @@ import 'package:testpackage/main.dart';
 
 
 
-/* define your handler here or create new file for handler */
+// define your handler here or create new file for handler 
 
 var homeHandler = Handler(
   transactionType: TransactionType.fromRight,
   pageBuilder: (BuildContext context,arg){
 
-      /* return your page from here */
+      //return your page from here 
       return HomePage(replaceRoute: arg["replaceRoute"],transactionType: arg["transactionType"],);
   }
 );
 
-
-/* define your route here */
+// define your route here 
 Map<String,Handler> route = {
     "home" : homeHandler
  };
 ```
 <br />
-Work of above code is create one route name `home `. Route have their own handler called  `homeHandler`. You can define TransactionType of slide how come on screen. Its not compansary if it null then Defualt transaction is work.
+Work of above code is create one route name `home`. Route have their own handler called  `homeHandler`. You can define TransactionType of slide how come on screen. Its not compansary if it null then Defualt transaction is work.
 <br />
 <br />
 Step 4: Register your route
 <br />
-It's a final step of intigration. Now you need to register your routes with package in first page of your class constructor my landing page of app is ` LandingPage() `
+It's a final step of intigration. Now you need to register your routes with package in first page of your class constructor my landing page of app is `LandingPage()`
 <br />
 <br />
 
