@@ -68,11 +68,12 @@ import 'package:testpackage/config/route.dart';
 class LandingPage extends StatelessWidget {
 
   LandingPage(){
-    /* registration of routes */  
-    Navigate.registerRoutes(
+   // start registration of routes 
+     Navigate.registerRoutes(
       routes: route,
+      defualtTransactionType: TransactionType.fromRight // if not provide in handler or manually in argument of navigation
     );
-    /* registration of routes */
+    //end  registration of routes 
   }
   @override
   Widget build(BuildContext context) {
