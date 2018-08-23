@@ -48,7 +48,7 @@ Map<String,Handler> route = {
  };
 ```
 <br />
-Work of above code is create one route name <code> home </code> . Route have their own handler called  <code> homeHandler </code> . You can define TransactionType of slide how come on screen. Its not compansary if it null then Defualt transaction is work.
+Work of above code is create one route name <code> home </code> . Route have their own handler called  <code> homeHandler </code> . You can define TransactionType of slide how come on screen. Its not required if it null then Defualt transaction is work.
 <br />
 <br />
 Step 4: Register your route
