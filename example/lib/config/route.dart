@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:navigate/navigate.dart';
-import 'package:testpackage/main.dart';
+import '../main.dart';
+
 
 
 
@@ -11,7 +12,7 @@ var homeHandler = Handler(
   pageBuilder: (BuildContext context,arg){
 
       /* return your page from here */
-      return HomePage(replaceRoute: arg["replaceRoute"],transactionType: arg["transactionType"],);
+      return HomePage(replaceRoute: arg["replaceRoute"],transactionType: arg["transactionType"],color: arg["color"],);
   }
 );
 

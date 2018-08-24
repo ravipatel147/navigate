@@ -1,5 +1,5 @@
 # demo
-<img src="https://docs.google.com/uc?export=download&id=1_Dkb2YOfKSrWd3qjkvYw1ka5_qmOWO6Q" height="400" />
+<img src="https://docs.google.com/uc?export=download&id=1QugGCA-87S6fcAqE1757JkYyqMPzAJ27" height="400" />
 <br />
 <a href="https://github.com/ravipatel147/navigate/tree/master/example"> Example source code is here </a>
 
@@ -18,7 +18,7 @@ App development its diff from web development in web development we need to pass
 
  Step 1: install navigator 
 ```
-navigator: 0.0.6
+navigator: 0.0.1
 ```
 
  Step 2: Create new folder  `lib\config`  

@@ -2,6 +2,8 @@ library navigate;
 
 import 'dart:async';
 import 'dart:core';
+import 'dart:ui' as ui;
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 /* ChangePage type */
@@ -14,7 +16,8 @@ class Navigate {
   /* routes information */
   static Map<String, Handler> _appRoutes;
 
-  static Future<dynamic> navigate(BuildContext context, String routeName,{arg,
+  static Future<dynamic> navigate(BuildContext context, String routeName,
+      {arg,
       TransactionType transactionType,
       ReplaceRoute replaceRoute = ReplaceRoute.none}) async {
     if (_appRoutes.containsKey(routeName)) {
@@ -99,13 +102,37 @@ class Handler {
           break;
       }
 
-      return (___, Animation<double> animation, ____, Widget child) {
-        return new SlideTransition(
-          position: Tween(begin: Offset(x, y), end: Offset(0.0, 0.0))
-              .animate(animation),
-          child: child,
+      if((x != 0.0 && y == 0.0) || (y != 0.0 && x==0.0)) {
+
+       return (___, Animation<double> animation, ____, Widget child) {
+        return LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constrains) {
+            return new SlideTransition(
+              position: Tween(begin: Offset(x, y), end: Offset(0.0, 0.0))
+                  .animate(animation),
+                child: Opacity(opacity: animation.value,child: child)
+            );
+          },
         );
       };
+      }else {
+
+      return (___, Animation<double> animation, ____, Widget child) {
+        return LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constrains) {
+            return new ClipOval(
+              // position: Tween(begin: Offset(x, y), end: Offset(0.0, 0.0))
+              //     .animate(animation),
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              clipper: PageCome(revalPercentage: animation.value,trasType:pageTras),
+              child: Opacity(opacity: animation.value,child: child)
+              
+            );
+          },
+        );
+      };
+      }
+    
     } else {
       return (___, Animation<double> animation, ____, Widget child) {
         return new FadeTransition(
@@ -117,6 +144,51 @@ class Handler {
   }
 }
 
+/* Clip Oval Transaction */
+class PageCome extends CustomClipper<ui.Rect> {
+  final revalPercentage;
+  final TransactionType trasType;
+
+  PageCome({this.revalPercentage = 0.7,this.trasType});
+  @override
+  ui.Rect getClip(ui.Size size) {
+    // TODO: implement getClip
+    double dx = (trasType == TransactionType.fromBottomRight) 
+                                                              ? size.width
+                                                              : (trasType == TransactionType.fromBottomCenter)
+                                                                  ? (size.width / 2)
+                                                                  : 0.0; 
+
+    final escpactor = Offset(dx , size.height * 0.9);
+     print("espactor" + escpactor.toString());
+
+    double theta = atan(escpactor.dy / escpactor.dx);
+    print("theta" + theta.toString());
+    
+    final distanceToCover = escpactor.dy / sin(theta);
+    print("distance" + distanceToCover.toString());
+
+    final radius = distanceToCover * revalPercentage;
+    print("radius" + radius.toString());
+
+    final diamerter = (radius * ((trasType == TransactionType.fromBottomLeft) ? 3.0 : 2.0));
+    print("diamerter" + diamerter.toString());
+
+
+    var rect = ui.Rect.fromLTWH(
+        escpactor.dx - radius, escpactor.dy - radius, diamerter, diamerter);
+
+    print(rect);
+    return rect;    
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<ui.Rect> oldClipper) {
+    // TODO: implement shouldReclip
+    return true;
+  }
+}
+
 /* enum of page translation type */
 enum TransactionType {
   fromTop,
@@ -124,6 +196,9 @@ enum TransactionType {
   fromLeft,
   fromRight,
   fadeIn,
+  fromBottomCenter,
+  fromBottomLeft,
+  fromBottomRight,
   custom,
 }
 /* replacement type enum */
