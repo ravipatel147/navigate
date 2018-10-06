@@ -16,9 +16,9 @@ App development its diff from web development in web development we need to pass
 
 ## Getting Started
 
- Step 1: install navigator 
+ Step 1: install navigate 
 ```
-navigator: 0.0.1
+navigate: 0.0.1
 ```
 
  Step 2: Create new folder  `lib\config`  
@@ -78,7 +78,7 @@ class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Navigator Demo"),),
+      appBar: AppBar(title: Text("Navigate Demo"),),
       body: Center(
             child:Text("welcome")
         ),
