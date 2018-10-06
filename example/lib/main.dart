@@ -19,7 +19,7 @@ class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Navigator Demo"),),
+      appBar: AppBar(title: Text("Navigate Demo"),),
       body: Center(
         child: new RaisedButton(
           child: Text("Take Demo"),
@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Navigator Demo"),
+        title: Text("Navigate Demo"),
       ),
       body: Container(
         color: currentColor,
