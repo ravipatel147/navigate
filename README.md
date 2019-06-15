@@ -18,7 +18,11 @@ App development its diff from web development in web development we need to pass
 
  Step 1: install navigate 
 ```
+<<<<<<< HEAD
 navigate: 1.0.1
+=======
+navigate: 0.0.1
+>>>>>>> f20518249ad941f940a2b70f577c307918cb44ad
 ```
 
  Step 2: Create new folder  `lib\config`  
@@ -102,8 +106,12 @@ Navigate.navigate(context,
                   );
 ```
 
+<<<<<<< HEAD
 #example 2
 https://github.com/ravipatel147/navigate/tree/master/example_with_threepage
+=======
+
+>>>>>>> f20518249ad941f940a2b70f577c307918cb44ad
 
 
 
