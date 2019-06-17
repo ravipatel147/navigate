@@ -58,10 +58,6 @@ class _HomePageState extends State<HomePage> {
     // TODO: implement initState
     super.initState();
     transactionType = widget.transactionType;
-<<<<<<< HEAD
-=======
-    print(transactionType);
->>>>>>> f20518249ad941f940a2b70f577c307918cb44ad
     replaceRoute = widget.replaceRoute;
     currentColor = widget.color;
   }

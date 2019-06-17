@@ -91,7 +91,6 @@ class Handler {
         case TransactionType.fromBottom:
           y = 1.0;
           break;
-<<<<<<< HEAD
         case TransactionType.fromBottom:
           break;
         case TransactionType.fadeIn:
@@ -104,8 +103,6 @@ class Handler {
           break;
         case TransactionType.custom:
           break;
-=======
->>>>>>> f20518249ad941f940a2b70f577c307918cb44ad
         case TransactionType.fromTop:
           y = -1.0;
           break;
@@ -117,7 +114,6 @@ class Handler {
           break;
       }
 
-<<<<<<< HEAD
       if ((x != 0.0 && y == 0.0) || (y != 0.0 && x == 0.0)) {
         return (___, Animation<double> animation, ____, Widget child) {
           return LayoutBuilder(
@@ -144,39 +140,6 @@ class Handler {
           );
         };
       }
-=======
-      if((x != 0.0 && y == 0.0) || (y != 0.0 && x==0.0)) {
-
-       return (___, Animation<double> animation, ____, Widget child) {
-        return LayoutBuilder(
-          builder: (BuildContext context, BoxConstraints constrains) {
-            return new SlideTransition(
-              position: Tween(begin: Offset(x, y), end: Offset(0.0, 0.0))
-                  .animate(animation),
-                child: Opacity(opacity: animation.value,child: child)
-            );
-          },
-        );
-      };
-      }else {
-
-      return (___, Animation<double> animation, ____, Widget child) {
-        return LayoutBuilder(
-          builder: (BuildContext context, BoxConstraints constrains) {
-            return new ClipOval(
-              // position: Tween(begin: Offset(x, y), end: Offset(0.0, 0.0))
-              //     .animate(animation),
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              clipper: PageCome(revalPercentage: animation.value,trasType:pageTras),
-              child: Opacity(opacity: animation.value,child: child)
-              
-            );
-          },
-        );
-      };
-      }
-    
->>>>>>> f20518249ad941f940a2b70f577c307918cb44ad
     } else {
       return (___, Animation<double> animation, ____, Widget child) {
         return new FadeTransition(
@@ -193,7 +156,6 @@ class PageCome extends CustomClipper<ui.Rect> {
   final revalPercentage;
   final TransactionType trasType;
 
-<<<<<<< HEAD
   PageCome({this.revalPercentage = 0.7, this.trasType});
   @override
   ui.Rect getClip(ui.Size size) {
@@ -223,39 +185,6 @@ class PageCome extends CustomClipper<ui.Rect> {
     var rect = ui.Rect.fromLTWH(
         escpactor.dx - radius, escpactor.dy - radius, diamerter, diamerter);
     return rect;
-=======
-  PageCome({this.revalPercentage = 0.7,this.trasType});
-  @override
-  ui.Rect getClip(ui.Size size) {
-    // TODO: implement getClip
-    double dx = (trasType == TransactionType.fromBottomRight) 
-                                                              ? size.width
-                                                              : (trasType == TransactionType.fromBottomCenter)
-                                                                  ? (size.width / 2)
-                                                                  : 0.0; 
-
-    final escpactor = Offset(dx , size.height * 0.9);
-     print("espactor" + escpactor.toString());
-
-    double theta = atan(escpactor.dy / escpactor.dx);
-    print("theta" + theta.toString());
-    
-    final distanceToCover = escpactor.dy / sin(theta);
-    print("distance" + distanceToCover.toString());
-
-    final radius = distanceToCover * revalPercentage;
-    print("radius" + radius.toString());
-
-    final diamerter = (radius * ((trasType == TransactionType.fromBottomLeft) ? 3.0 : 2.0));
-    print("diamerter" + diamerter.toString());
-
-
-    var rect = ui.Rect.fromLTWH(
-        escpactor.dx - radius, escpactor.dy - radius, diamerter, diamerter);
-
-    print(rect);
-    return rect;    
->>>>>>> f20518249ad941f940a2b70f577c307918cb44ad
   }
 
   @override
