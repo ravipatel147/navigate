@@ -6,7 +6,7 @@
 
 ## navigate
 
-A new Flutter package for Byutifull navigation
+A new Flutter package for Beautifull navigation
 
 # Why develop this package
 
@@ -105,6 +105,18 @@ Navigate.navigate(context,
 #example 2
 https://github.com/ravipatel147/navigate/tree/master/example_with_threepage
 
+### Callback functionality with routeName
+
+Now you can have a callback run when navigating with the routeName in it.
+For instance on navigation to the next route where you want to have analytics run:
+
+```
+Navigate.registerRoutes(
+routes: route,
+defualtTransactionType: TransactionType.fromRight,
+callback: (routeName) { analytics.setCurrentScreen(screenName: routeName);}
+);
+```
 
 
 
