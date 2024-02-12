@@ -15,12 +15,16 @@ class Navigate {
   static TransactionType defultTransactionType;
   /* routes information */
   static Map<String, Handler> _appRoutes;
+  static Function _callback;
 
   static Future<dynamic> navigate(BuildContext context, String routeName,
       {arg,
       TransactionType transactionType,
       ReplaceRoute replaceRoute = ReplaceRoute.none}) async {
     if (_appRoutes.containsKey(routeName)) {
+      if(_callback != null){
+        _callback(routeName);
+      }
       var handler = _appRoutes[routeName];
       return await handler.renderWithAnimation(
           context, arg, transactionType, replaceRoute);
@@ -31,9 +35,11 @@ class Navigate {
 
   static registerRoutes(
       {Map<String, Handler> routes,
-      TransactionType defualtTransactionType = TransactionType.fromBottom}) {
+      TransactionType defualtTransactionType = TransactionType.fromBottom,
+      Function callback}) {
     _appRoutes = routes;
     defultTransactionType = defualtTransactionType;
+    _callback = callback;
   }
 }
 
